@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-war-2-main
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: user-project
+    server: https://kubernetes.default.svc
+  project: default
+  source: 
+    path: resources
+    repoURL: https://github.com/jfdenise/my-war-2
+    targetRevision: main_deployment
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=false

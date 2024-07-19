@@ -1,0 +1,15 @@
+---
+apiVersion: "route.openshift.io/v1"
+kind: "Route"
+metadata:
+  labels:
+    org.wildfly.glow: ""
+  name: "my-war-2-main"
+spec:
+  tls:
+    insecureEdgeTerminationPolicy: "Redirect"
+    termination: "edge"
+  to:
+    kind: "Service"
+    name: "my-war-2-main"
+    weight: 100
