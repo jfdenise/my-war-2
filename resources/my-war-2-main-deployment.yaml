@@ -3,6 +3,7 @@ apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
   labels:
+    demo.glow: "hello"
     org.wildfly.glow: ""
     deployment: "my-war-2-main"
   name: "my-war-2-main"
