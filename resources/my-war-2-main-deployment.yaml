@@ -21,7 +21,7 @@ spec:
         deployment: "my-war-2-main"
     spec:
       containers:
-      - image: "quay.io/jdenise/pipeline-wildfly-app:github_com_jfdenise_my-war-2_revision_main-1-c8934b0032e977ab73c8fe323d2f7171bf73bce2"
+      - image: "quay.io/jdenise/pipeline-wildfly-app:github_com_jfdenise_my-war-2_revision_main-2-45701e409a697ae658baa8c6b9a1062080457d79"
         imagePullPolicy: "IfNotPresent"
         livenessProbe:
           failureThreshold: 3
